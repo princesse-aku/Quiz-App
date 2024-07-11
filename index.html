@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Quiz App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="start-screen">
+        <h1 class="heading">Quiz.</h1>
+        <div class="settings">
+          <label for="num-questions">Nombre de questions :</label>
+          <select id="num-questions">
+            <option value="5">5</option>
+          </select>
+          <label for="category">Choisir la catégorie :</label>
+          <select id="category">
+            <option value="general">Connaissance Générale</option>
+            <option value="science">Science</option>
+            <option value="history">Histoire</option>
+          </select>
+          <label for="difficulty">Sélectionner la difficulté :</label>
+          <select id="difficulty">
+            <option value="easy">Facile</option>
+            <option value="medium">Moyen</option>
+            <option value="hard">Difficile</option>
+          </select>
+          <label for="time">Temps par question :</label>
+          <select id="time">
+            <option value="10">10 secondes</option>
+            <option value="15">15 secondes</option>
+            <option value="20">20 secondes</option>
+          </select>
+        </div>
+        <button class="btn start">Démarrer le Quiz</button>
+      </div>
+      <div class="quiz hide">
+        <div class="timer">
+          <div class="progress">
+            <div class="progress-bar"></div>
+            <span class="progress-text"></span>
+          </div>
+        </div>
+        <div class="question-wrapper">
+          <div class="number">
+            Question <span class="current">1</span>
+            <span class="total">/5</span>
+          </div>
+          <div class="question"></div>
+        </div>
+        <div class="answer-wrapper"></div>
+        <button class="btn submit" disabled>Soumettre</button>
+        <button class="btn next">Suivant</button>
+      </div>
+      <div class="end-screen hide">
+        <h1 class="heading"> Quiz.</h1>
+        <div class="score">
+          <span class="score-text">Votre score :</span>
+          <div>
+            <span class="final-score">0</span>
+            <span class="total-score">/5</span>
+          </div>
+        </div>
+        <button class="btn restart">Recommencer</button>
+      </div>
+    </div>
+    <script src="../script/script.js"></script>
+  </body>
+</html>
